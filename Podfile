@@ -5,12 +5,17 @@ target 'AmplifyGettingStarted' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'amplify-tools'
+  pod 'amplify-tools', '~> 0.2.0'
 
-  pod 'Amplify'
-  pod 'AWSPluginsCore'
-  pod 'AmplifyPlugins/AWSAPIPlugin'
-
+  pod 'Amplify', '~> 0.10.0'
+  pod 'AWSPluginsCore', '~> 0.10.0'
+  pod 'AmplifyPlugins/AWSAPIPlugin' , '~> 0.10.0'
+  
+  # auth
+  pod 'AWSMobileClient', '~> 2.12.0'      # Required dependency
+  pod 'AWSAuthUI', '~> 2.12.0'            # Optional dependency required to use drop-in UI
+  pod 'AWSUserPoolsSignIn', '~> 2.12.0'   # Optional dependency required to use drop-in UI
+  
   # Pods for AmplifyGettingStarted
 
   target 'AmplifyGettingStartedTests' do

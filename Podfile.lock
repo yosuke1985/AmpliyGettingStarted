@@ -7,6 +7,9 @@ PODS:
     - Starscream (~> 3.0.2)
   - AWSAuthCore (2.12.5):
     - AWSCore (= 2.12.5)
+  - AWSAuthUI (2.12.5):
+    - AWSAuthCore (= 2.12.5)
+    - AWSCore (= 2.12.5)
   - AWSCognitoIdentityProvider (2.12.5):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
     - AWSCore (= 2.12.5)
@@ -18,14 +21,20 @@ PODS:
   - AWSPluginsCore (0.10.0):
     - Amplify (= 0.10.0)
     - AWSMobileClient (~> 2.12.2)
+  - AWSUserPoolsSignIn (2.12.5):
+    - AWSAuthCore (= 2.12.5)
+    - AWSCognitoIdentityProvider (= 2.12.5)
   - ReachabilitySwift (5.0.0)
   - Starscream (3.0.6)
 
 DEPENDENCIES:
-  - Amplify
-  - amplify-tools
-  - AmplifyPlugins/AWSAPIPlugin
-  - AWSPluginsCore
+  - Amplify (~> 0.10.0)
+  - amplify-tools (~> 0.2.0)
+  - AmplifyPlugins/AWSAPIPlugin (~> 0.10.0)
+  - AWSAuthUI (~> 2.12.0)
+  - AWSMobileClient (~> 2.12.0)
+  - AWSPluginsCore (~> 0.10.0)
+  - AWSUserPoolsSignIn (~> 2.12.0)
 
 SPEC REPOS:
   trunk:
@@ -33,11 +42,13 @@ SPEC REPOS:
     - amplify-tools
     - AmplifyPlugins
     - AWSAuthCore
+    - AWSAuthUI
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
     - AWSMobileClient
     - AWSPluginsCore
+    - AWSUserPoolsSignIn
     - ReachabilitySwift
     - Starscream
 
@@ -46,14 +57,16 @@ SPEC CHECKSUMS:
   amplify-tools: 2304ea0782b61fdb15c7a1e6bf5e0410b02b4f46
   AmplifyPlugins: 5531c6c13242f40a8c057aad64cb3b915559b65e
   AWSAuthCore: 6b81b748f2fc0b315cda0acdf55f3a540eb8f9b7
+  AWSAuthUI: 03e83f0a9fab660d43cb57e2fe073965737b910a
   AWSCognitoIdentityProvider: 7c8cbd6477fd84ccce33a349a46fb44d07edb252
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: 543d1c281ad08401d0a99e181526aa529051a8ad
   AWSMobileClient: 5ce94de58005c3042e99d51c2e6bec7956ef2b36
   AWSPluginsCore: 7d7f8cd3fc5664b1eeb67b1a9aa312f78cf09cb9
+  AWSUserPoolsSignIn: 96d6c17f826b2cc9f3232ae96900d8df4b5cee24
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: a4a865e9ba4d655b2ae37a83bc5927a1ac5568c2
+PODFILE CHECKSUM: a50ec828e7f8f9dd7e1447eceefc660d68a5e468
 
 COCOAPODS: 1.8.4
