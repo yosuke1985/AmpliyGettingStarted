@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Amplify
+import AmplifyPlugins
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let apiPlugin = AWSAPIPlugin(modelRegistration: AmplifyModels())
+        do {
+            try Amplify.add(plugin: apiPlugin)
+            try Amplify.configure()
+            print("Amplify initialized")
+        } catch {
+            print("Failed to configure Amplify \(error)")
+        }
         return true
     }
 
