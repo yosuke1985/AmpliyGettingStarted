@@ -16,37 +16,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98a-x8-tKB">
-                                <rect key="frame" x="155" y="437.5" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="83" y="422.5" width="248.5" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tah-8e-48p">
-                                <rect key="frame" x="185" y="579" width="44" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="ggB-Ic-Z18"/>
-                                </constraints>
+                                <rect key="frame" x="185" y="564" width="44" height="30"/>
                                 <state key="normal" title="logout"/>
                                 <connections>
                                     <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dC-ik-Y7F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2td-jM-fuy">
-                                <rect key="frame" x="129" y="311" width="157" height="30"/>
+                                <rect key="frame" x="128.5" y="311" width="157" height="30"/>
                                 <state key="normal" title="S3アップロードボタン"/>
                                 <connections>
                                     <action selector="s3Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nny-2i-K5r"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-ra-sSn">
+                                <rect key="frame" x="132" y="160" width="150" height="30"/>
+                                <state key="normal" title="Dynamoにデータ追加"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY3-Bl-0aR">
+                                <rect key="frame" x="119" y="212" width="179" height="30"/>
+                                <state key="normal" title="Dynamoからデータを取得"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2td-jM-fuy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="223" id="Xai-B9-od3"/>
+                            <constraint firstItem="DY3-Bl-0aR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="36c-2h-oJw"/>
+                            <constraint firstItem="2td-jM-fuy" firstAttribute="top" secondItem="DY3-Bl-0aR" secondAttribute="bottom" constant="69" id="LLz-a0-ztB"/>
+                            <constraint firstItem="2BI-ra-sSn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="T3Y-9g-ZkX"/>
                             <constraint firstItem="98a-x8-tKB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z2a-4a-9VL"/>
+                            <constraint firstItem="DY3-Bl-0aR" firstAttribute="top" secondItem="2BI-ra-sSn" secondAttribute="bottom" constant="22" id="hNn-ej-IVu"/>
                             <constraint firstItem="98a-x8-tKB" firstAttribute="centerX" secondItem="tah-8e-48p" secondAttribute="centerX" id="jfq-vn-c3r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tah-8e-48p" secondAttribute="bottom" constant="268" id="lJo-oH-Ckl"/>
                             <constraint firstItem="2td-jM-fuy" firstAttribute="centerX" secondItem="98a-x8-tKB" secondAttribute="centerX" id="lLu-3Z-ObY"/>
                             <constraint firstItem="2td-jM-fuy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mNi-Be-pDa"/>
+                            <constraint firstItem="2BI-ra-sSn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="sCh-so-m2y"/>
+                            <constraint firstItem="2BI-ra-sSn" firstAttribute="centerX" secondItem="2td-jM-fuy" secondAttribute="centerX" id="yjR-Am-Ain"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
