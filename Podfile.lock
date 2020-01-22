@@ -5,6 +5,11 @@ PODS:
     - AWSPluginsCore (= 0.10.0)
     - ReachabilitySwift (~> 5.0.0)
     - Starscream (~> 3.0.2)
+  - AWSAppSync (3.0.0):
+    - AWSCore (~> 2.12.0)
+    - ReachabilitySwift (~> 5.0.0)
+    - SQLite.swift (~> 0.12.2)
+    - Starscream (~> 3.0.2)
   - AWSAuthCore (2.12.5):
     - AWSCore (= 2.12.5)
   - AWSAuthUI (2.12.5):
@@ -27,12 +32,16 @@ PODS:
     - AWSAuthCore (= 2.12.5)
     - AWSCognitoIdentityProvider (= 2.12.5)
   - ReachabilitySwift (5.0.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - Starscream (3.0.6)
 
 DEPENDENCIES:
   - Amplify (~> 0.10.0)
   - amplify-tools (~> 0.2.0)
   - AmplifyPlugins/AWSAPIPlugin (~> 0.10.0)
+  - AWSAppSync (~> 3.0.0)
   - AWSAuthUI (~> 2.12.0)
   - AWSMobileClient (~> 2.12.0)
   - AWSPluginsCore (~> 0.10.0)
@@ -44,6 +53,7 @@ SPEC REPOS:
     - Amplify
     - amplify-tools
     - AmplifyPlugins
+    - AWSAppSync
     - AWSAuthCore
     - AWSAuthUI
     - AWSCognitoIdentityProvider
@@ -54,12 +64,14 @@ SPEC REPOS:
     - AWSS3
     - AWSUserPoolsSignIn
     - ReachabilitySwift
+    - SQLite.swift
     - Starscream
 
 SPEC CHECKSUMS:
   Amplify: 786ae0a91656086c74de41c8821a869095fa6a6d
   amplify-tools: 2304ea0782b61fdb15c7a1e6bf5e0410b02b4f46
   AmplifyPlugins: 5531c6c13242f40a8c057aad64cb3b915559b65e
+  AWSAppSync: 04f615ce0c3a0c815b7bf1ca3d47362a22ed12ca
   AWSAuthCore: 6b81b748f2fc0b315cda0acdf55f3a540eb8f9b7
   AWSAuthUI: 03e83f0a9fab660d43cb57e2fe073965737b910a
   AWSCognitoIdentityProvider: 7c8cbd6477fd84ccce33a349a46fb44d07edb252
@@ -70,8 +82,9 @@ SPEC CHECKSUMS:
   AWSS3: 43c54c47c90e0ba408784117827a085ca5123830
   AWSUserPoolsSignIn: 96d6c17f826b2cc9f3232ae96900d8df4b5cee24
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 2b77e87ae87886dfedc661c2bcd1279a315afe09
+PODFILE CHECKSUM: b9c9fe75c22c1887572a87ab9f7bb49805dfa711
 
 COCOAPODS: 1.8.4
