@@ -9,6 +9,7 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
+import AWSMobileClient
 
 class ViewController: UIViewController {
 
@@ -17,10 +18,52 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
 //        apiMutate()
 //        apiQuery(id: "F91ECB47-16CF-40E2-BA72-AE2C0C8F0BF3")
-        createSubscription()
+//        createSubscription()
+//        showAuthView()
+        
+//        AWSMobileClient.default()
+//            .showSignIn(navigationController: self.navigationController!,
+//                             signInUIOptions: SignInUIOptions(
+//                                   canCancel: false,
+//                                   logoImage: UIImage(named: "MyCustomLogo"),
+//                                    backgroundColor: UIColor.black)) { (result, err) in
+//                                    //handle results and errors
+//        }
+        
+        AWSMobileClient.default().signUp(
+            username: "your_username",
+            password: "Abc@123!",
+            userAttributes: ["nickname":"Johnny", "badge_number": "ABC123XYZ"]) { (signUpResult, error) in
+            //Use results as before
+        }
+        
     }
 
 
+    @IBAction func logoutAction(_ sender: Any) {
+        
+        AWSMobileClient.sharedInstance().signOut()
+
+        // サインイン画面を表示
+        AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, { (userState, error) in
+            if(error == nil){       //Successful signin
+                DispatchQueue.main.async {
+                    print("Sign In")
+                }
+            }
+        })
+        
+    }
+    
+    func showSignIn(){
+        AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, { (signInState, error) in
+            if let signInState = signInState {
+                print("Sign in flow completed: \(signInState)")
+            } else if let error = error {
+                print("error logging in: \(error.localizedDescription)")
+            }
+        })
+    }
     func apiMutate() {
         let note = Note(content: "いいい")
         Amplify.API.mutate(of: note, type: .create) { (event) in
