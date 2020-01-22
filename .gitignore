@@ -92,3 +92,4 @@ iOSInjectionProject/
 amplifyconfiguration.json
 awsconfiguration.json
 amplify
+SecretConstants.swift
