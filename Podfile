@@ -16,6 +16,8 @@ target 'AmplifyGettingStarted' do
   pod 'AWSAuthUI', '~> 2.12.0'            # Optional dependency required to use drop-in UI
   pod 'AWSUserPoolsSignIn', '~> 2.12.0'   # Optional dependency required to use drop-in UI
   
+  pod 'AWSS3', '~> 2.12.5' # S3用のSDKを追加
+  
   # Pods for AmplifyGettingStarted
 
   target 'AmplifyGettingStartedTests' do
