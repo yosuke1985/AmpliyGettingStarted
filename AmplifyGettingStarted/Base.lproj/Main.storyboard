@@ -21,20 +21,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tah-8e-48p">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tah-8e-48p">
                                 <rect key="frame" x="185" y="579" width="44" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="ggB-Ic-Z18"/>
+                                </constraints>
                                 <state key="normal" title="logout"/>
                                 <connections>
                                     <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dC-ik-Y7F"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2td-jM-fuy">
+                                <rect key="frame" x="129" y="311" width="157" height="30"/>
+                                <state key="normal" title="S3アップロードボタン"/>
+                                <connections>
+                                    <action selector="s3Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nny-2i-K5r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="98a-x8-tKB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2nR-FT-1xy"/>
-                            <constraint firstItem="tah-8e-48p" firstAttribute="top" secondItem="98a-x8-tKB" secondAttribute="bottom" constant="135.5" id="CpE-hS-pHM"/>
-                            <constraint firstItem="tah-8e-48p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZDc-Ix-ssV"/>
-                            <constraint firstItem="98a-x8-tKB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vA1-hj-aov"/>
+                            <constraint firstItem="2td-jM-fuy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="223" id="Xai-B9-od3"/>
+                            <constraint firstItem="98a-x8-tKB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z2a-4a-9VL"/>
+                            <constraint firstItem="98a-x8-tKB" firstAttribute="centerX" secondItem="tah-8e-48p" secondAttribute="centerX" id="jfq-vn-c3r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tah-8e-48p" secondAttribute="bottom" constant="268" id="lJo-oH-Ckl"/>
+                            <constraint firstItem="2td-jM-fuy" firstAttribute="centerX" secondItem="98a-x8-tKB" secondAttribute="centerX" id="lLu-3Z-ObY"/>
+                            <constraint firstItem="2td-jM-fuy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mNi-Be-pDa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

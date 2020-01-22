@@ -10,6 +10,7 @@ import UIKit
 import Amplify
 import AmplifyPlugins
 import AWSMobileClient
+import AWSS3
 
 class ViewController: UIViewController {
 
@@ -40,6 +41,47 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func s3Action(_ sender: Any) {
+        
+        let expression = AWSS3TransferUtilityUploadExpression()
+        expression.progressBlock = {(task, progress) in
+            DispatchQueue.main.async(execute: {
+                // Do something e.g. Update a progress bar.
+            })
+        }
+
+        var completionHandler: AWSS3TransferUtilityUploadCompletionHandlerBlock?
+        completionHandler = { (task, error) -> Void in
+            DispatchQueue.main.async(execute: {
+                // Do something e.g. Alert a user for transfer completion.
+                // On failed uploads, `error` contains the error object.
+            })
+        }
+
+        let data: Data = "hello world".data(using: .utf8)! // Data to be uploaded
+        let transferUtility = AWSS3TransferUtility.default()
+
+        let format:DateFormatter = DateFormatter()
+        format.dateFormat = "yyyyMMdd-hhmmss"
+        let dateString:String = format.string(from: Date())
+
+        transferUtility.uploadData(data,
+           bucket: SecretConstants.s3BucketName,
+           key: "uploads/"+dateString+".txt",
+           contentType: "text/plain",
+           expression: expression,
+           completionHandler: completionHandler).continueWith {
+            (task) -> AnyObject? in
+            if let error = task.error {
+                print("Error: \(error.localizedDescription)")
+            }
+
+            if let _ = task.result {
+                // Do something with uploadTask.
+            }
+            return nil
+        }
+    }
     @IBAction func logoutAction(_ sender: Any) {
         
         AWSMobileClient.sharedInstance().signOut()

@@ -24,6 +24,7 @@
 		EAD1E59623D672850047972F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD1E59123D671E70047972F /* Note.swift */; };
 		EAD1E59723D672880047972F /* Task+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD1E59223D671E70047972F /* Task+Schema.swift */; };
 		EAD1E59823D6728B0047972F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD1E59323D671E70047972F /* Task.swift */; };
+		EAEF238723D85B5800D530B0 /* SecretConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEF238623D85B5800D530B0 /* SecretConstants.swift */; };
 		FB88A94D5C17C8F0E47FFCEF /* Pods_AmplifyGettingStarted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44529F46E68F65C264B7EE2 /* Pods_AmplifyGettingStarted.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		EAD1E59123D671E70047972F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		EAD1E59223D671E70047972F /* Task+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Schema.swift"; sourceTree = "<group>"; };
 		EAD1E59323D671E70047972F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		EAEF238623D85B5800D530B0 /* SecretConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretConstants.swift; sourceTree = "<group>"; };
 		F1B22B123CD744E2FB5F9D5D /* Pods_AmplifyGettingStartedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmplifyGettingStartedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				EA6A795623D12DF800EF1162 /* AppDelegate.swift */,
 				EA6A795823D12DF800EF1162 /* SceneDelegate.swift */,
 				EA6A795A23D12DF800EF1162 /* ViewController.swift */,
+				EAEF238623D85B5800D530B0 /* SecretConstants.swift */,
 				EA6A795C23D12DF800EF1162 /* Main.storyboard */,
 				EA6A795F23D12DFC00EF1162 /* Assets.xcassets */,
 				EA6A796123D12DFC00EF1162 /* LaunchScreen.storyboard */,
@@ -442,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEF238723D85B5800D530B0 /* SecretConstants.swift in Sources */,
 				EAD1E59823D6728B0047972F /* Task.swift in Sources */,
 				EAD1E59423D6727D0047972F /* AmplifyModels.swift in Sources */,
 				EA6A795B23D12DF800EF1162 /* ViewController.swift in Sources */,
